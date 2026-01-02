@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hiragana Quiz</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% begin %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% rescue Webpacker::Manifest::MissingEntryError => e %>
+      <!-- Webpacker assets not compiled. Run: yarn install && bin/webpack -->
+    <% end %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

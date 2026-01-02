@@ -1,0 +1,41 @@
+<div class="hiragana-container">
+  <h1>Hiragana Quiz</h1>
+  
+  <div class="score-display">
+    <p>Score: <strong><%= @score %></strong> / <strong><%= @total %></strong></p>
+    <% if @total > 0 %>
+      <p>Accuracy: <strong><%= (@score.to_f / @total * 100).round(1) %>%</strong></p>
+    <% end %>
+  </div>
+
+  <% if flash[:success] %>
+    <div class="flash flash-success"><%= flash[:success] %></div>
+  <% end %>
+
+  <% if flash[:error] %>
+    <div class="flash flash-error"><%= flash[:error] %></div>
+  <% end %>
+
+  <div class="quiz-area">
+    <div class="hiragana-display">
+      <h2>What is this character?</h2>
+      <div class="hiragana-large"><%= @random_char %></div>
+    </div>
+
+    <%= form_tag check_hiragana_path, method: :post, class: "quiz-form" do %>
+      <%= hidden_field_tag :hiragana, @random_char %>
+      
+      <div class="input-group">
+        <%= label_tag :answer, "Enter the romaji (English letters):", class: "input-label" %>
+        <%= text_field_tag :answer, nil, autofocus: true, class: "answer-input", placeholder: "e.g., ka, ki, ku..." %>
+      </div>
+
+      <div class="button-group">
+        <%= submit_tag "Check Answer", class: "btn-submit" %>
+        <%= link_to "Show Chart", hiragana_index_path, class: "btn-link" %>
+        <%= button_to "Reset Score", reset_hiragana_path, method: :post, class: "btn-reset" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

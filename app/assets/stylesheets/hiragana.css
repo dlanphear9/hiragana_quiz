@@ -1,0 +1,274 @@
+.hiragana-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #555;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.score-display {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.score-display p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.score-display strong {
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+/* Hiragana Chart */
+.chart-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hiragana-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chart-cell {
+  width: 125px;
+  height: 50px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.chart-cell:hover {
+  border-color: #4a90e2;
+  background: #f0f7ff;
+  transform: scale(1.05);
+}
+
+.chart-cell.empty {
+  border: none;
+  background: transparent;
+}
+
+.hiragana-char {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.romaji {
+  padding-left: 20px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Quiz Section */
+.quiz-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.quiz-area {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hiragana-display {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hiragana-large {
+  font-size: 120px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 10px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  display: inline-block;
+  min-width: 150px;
+}
+
+.quiz-form {
+  margin-top: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+
+.answer-input {
+  width: 100px;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-quiz,
+.btn-submit,
+.btn-link,
+.btn-reset {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btn-quiz,
+.btn-submit {
+  background: #4a90e2;
+  color: white;
+}
+
+.btn-quiz:hover,
+.btn-submit:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-link {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-link:hover {
+  background: #5a6268;
+}
+
+.btn-reset {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-reset:hover {
+  background: #c82333;
+}
+
+/* Flash Messages */
+.flash {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.flash-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.flash-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hiragana-container {
+    padding: 10px;
+  }
+
+  .hiragana-large {
+    font-size: 80px;
+    padding: 20px;
+  }
+
+  .chart-cell {
+    width: 80px;
+    height: 40px;
+    flex-direction: column;
+  }
+
+  .hiragana-char {
+    font-size: 24px;
+  }
+
+  .romaji {
+    font-size: 12px;
+
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn-quiz,
+  .btn-submit,
+  .btn-link,
+  .btn-reset {
+    width: 100%;
+  }
+}
+

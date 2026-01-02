@@ -1,0 +1,3 @@
+# TODO:
+- Add a way to show all the answers after the quiz is submitted
+- Add a "hint" button to show all the letters in the same row as the current character (ka, ki, ku, ke, ko)
